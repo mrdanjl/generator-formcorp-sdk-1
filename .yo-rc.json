@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Daniel Lee",
+      "authorEmail": "dlee@formcorp.com.au",
+      "authorUrl": "https://twitter.com/mrdanjl"
+    }
+  }
+}
