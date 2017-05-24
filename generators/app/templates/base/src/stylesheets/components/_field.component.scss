@@ -1,0 +1,25 @@
+@import '../mixins';
+@import '../theme';
+
+.fc-field {
+  @include spacing($space-before-field, $space-after-field);
+}
+.fc-field label {
+  display: block;
+  @include spacing($space-before-field-label, $space-after-field-label);
+}
+.fc-field .fc-desc {
+  @include spacing($space-before-field-description, $space-after-field-description);
+}
+.fc-field .fc-field-element-container {
+  @include spacing($space-before-field-input, $space-after-field-input);
+}
+.fc-field .fc-error-text {
+  @include spacing($space-before-field-error, $space-after-field-error);
+
+  padding: 0;
+
+  @if mixin_exists(error-text) {
+    @include error-text;
+  }
+}

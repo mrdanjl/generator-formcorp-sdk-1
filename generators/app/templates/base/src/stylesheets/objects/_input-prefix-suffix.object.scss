@@ -1,0 +1,66 @@
+@import '../theme';
+
+@mixin input-prefix-suffix-default {
+  .fc-field-element-container:before {
+    bottom: 0;
+    color: lighten($text-color, 50%);
+    content: '';
+    font-size: $input-font-size;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0 10px;
+    position: absolute;
+    line-height: $input-min-height + 1;
+    text-align: center;
+    top: 0;
+    z-index: 100;
+
+    @content;
+
+    @if mixin_exists(input-prefix-suffix) {
+      @include input-prefix-suffix;
+    }
+  }
+}
+@mixin input-prefix-default {
+  @include input-prefix-suffix-default {
+    left: 0;
+    position: absolute;
+    @content;
+  }
+
+  .fc-fieldinput {
+    padding-left: 25px;
+  }
+};
+@mixin input-suffix-default {
+  @include input-prefix-suffix-default {
+    padding-right: 15px;
+    right: 0;
+    @content;
+  }
+
+  .fc-fieldinput {
+    padding-right: 30px;
+    text-align: right;
+  }
+};
+
+.prefix-dollar {
+  @include input-prefix-default {
+    content: '$';
+
+    @if mixin_exists(input-prefix) {
+      @include input-prefix;
+    }
+  };
+}
+.suffix-percentage {
+  @include input-suffix-default {
+    content: '%';
+
+    @if mixin_exists(input-suffix) {
+      @include input-suffix;
+    }
+  };
+}

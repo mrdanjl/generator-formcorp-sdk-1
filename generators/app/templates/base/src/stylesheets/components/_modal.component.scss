@@ -1,0 +1,49 @@
+@import '../theme';
+@import '../objects/button.object';
+
+$modal-padding: 10px 15px !default;
+
+.fc-modal {
+  display: none;
+}
+.fc-modal.fc-show {
+  display: block;
+}
+.modal-header {
+  background-color: $secondary-color;
+  padding: $modal-padding;
+  position: relative;
+
+  @if mixin_exists(modal-header) {
+    @include modal-header;
+  }
+}
+.modal-header h2 {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+
+  @if mixin_exists(modal-header-title) {
+    @include modal-header-title;
+  }
+}
+.modal-header .fc-btn-close {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.modal-body {
+  padding: $modal-padding;
+
+  @if mixin_exists(modal-body) {
+    @include modal-body;
+  }
+}
+.modal-footer {
+  padding: $modal-padding;
+
+  @if mixin_exists(modal-footer) {
+    @include modal-footer;
+  }
+}

@@ -1,0 +1,66 @@
+@import '../mixins';
+@import '../theme';
+
+$input-radio-size: 20px !default;
+$input-radio-border-width: 1px !default;
+$input-radio-space-between-inner-circle: 3px !default;
+$input-radio-inner-size: $input-radio-size - (2 * ($input-radio-space-between-inner-circle + $input-radio-border-width)) !default;
+
+// Radio inputs
+input[type=radio] {
+  display: none;
+}
+input[type=radio] + label:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+input[type=radio] + label > span:first-child {
+  border: $input-radio-border-width solid $secondary-color;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: $input-radio-size;
+  margin-right: $element-space-between-label;
+  padding: $input-radio-space-between-inner-circle;
+  position: relative;
+  vertical-align: middle;
+  width: $input-radio-size;
+
+  @if mixin_exists(input-radio) {
+    @include input-radio;
+  }
+
+  & i {
+    background-color: $secondary-color;
+    border-radius: 50%;
+    display: block;
+    height: $input-radio-inner-size;
+    visibility: hidden;
+    width: $input-radio-inner-size;
+
+    @if mixin_exists(input-radio-inner) {
+      @include input-radio-inner;
+    }
+  }
+}
+input[type=radio]:checked + label > span:first-child {
+  @if mixin_exists(input-radio-checked) {
+    @include input-radio-checked;
+  }
+
+  & i {
+    visibility: visible;
+
+    @if mixin_exists(input-radio-inner-checked) {
+      @include input-radio-inner-checked;
+    }
+  }
+}
+input[type=radio] + label:hover {
+  cursor: pointer;
+}
+input[type=radio] + label > .fc-end-radio-item {
+  display: none !important;
+}

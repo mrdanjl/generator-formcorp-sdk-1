@@ -1,0 +1,39 @@
+////
+/// @group Input base (text, select)
+////
+
+@import '../mixins';
+@import '../theme';
+
+/// The default font size for all inputs.
+$input-font-size: 14px !default;
+
+/// The default minimum height for all inputs.
+$input-min-height: 34px !default;
+
+/// Selectors to apply base input styles to.
+$input-selectors: 'input[type=text], input[type=date], input[type=password], select, textarea';
+
+#{$input-selectors} {
+  font-family: $text-font-family;
+  font-size: $input-font-size;
+  min-height: $input-min-height;
+
+  @if mixin_exists(input-text) {
+    @include input-text;
+  }
+}
+.fc-field-success {
+  #{$input-selectors} {
+    @if mixin_exists(input-text-success) {
+      @include input-text-success;
+    }
+  }
+}
+.fc-error {
+  #{$input-selectors} {
+    @if mixin_exists(input-text-error) {
+      @include input-text-error;
+    }
+  }
+}

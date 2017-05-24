@@ -1,0 +1,30 @@
+@import '../mixins';
+@import '../theme';
+
+.fc-btn {
+  @include spacing($space-before-button, $space-after-button);
+
+  line-height: normal;
+
+  @if mixin_exists(button) {
+    @include button;
+  }
+}
+.fc-prev-page .fc-btn {
+  @if mixin_exists(button-secondary) {
+    @include button-secondary;
+  }
+
+  float: left;
+
+  @if mixin_exists(button-prev-page) {
+    @include button-prev-page;
+  }
+}
+.fc-submit .fc-btn {
+  float: right;
+
+  @if mixin_exists(button-submit) {
+    @include button-submit;
+  }
+}

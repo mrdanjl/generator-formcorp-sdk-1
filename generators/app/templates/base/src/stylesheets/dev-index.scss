@@ -1,0 +1,11 @@
+// dev only index
+@import 'index';
+
+body {
+  @include typography($text-color, $text-font-family, $text-font-size);
+}
+
+.fc-container.fc-form-loaded {
+  max-width: 1200px;
+  margin: 0 auto;
+}

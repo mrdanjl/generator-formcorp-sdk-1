@@ -1,0 +1,97 @@
+@import '../theme';
+@import '../base/input-range.base';
+
+$input-range-track-color: #ddd !default;
+$input-range-progress-color: $input-range-color !default;
+$input-range-show-steps: true !default;
+$input-range-step-height: 6px !default;
+$input-range-steps-below-track: true !default;
+$input-range-space-between-track-and-steps: 0 !default;
+
+.rangeslider {
+  background-color: $input-range-track-color;
+  border-radius: $input-range-track-height / 2;
+  height: $input-range-track-height;
+  margin-top: ($input-range-thumb-size / 2) + $space-before-field-input;
+
+  @if mixin_exists(input-range-track) {
+    @include input-range-track;
+  }
+}
+.rangeslider__fill {
+  background-color: $input-range-progress-color;
+  border-radius: inherit;
+  height: inherit;
+  position: absolute;
+
+  @if mixin_exists(input-range-progress) {
+    @include input-range-progress;
+  }
+}
+.rangeslider__handle {
+  background-color: #fff;
+  border: $input-range-track-height solid $input-range-progress-color;
+  border-radius: 50%;
+  height: $input-range-thumb-size;
+  position: absolute;
+  top: -($input-range-thumb-size / 2) + 1;
+  width: $input-range-thumb-size;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @if mixin_exists(input-range-thumb) {
+    @include input-range-thumb;
+  }
+}
+@if ($input-range-show-steps == true) {
+  .rangeslider__ruler {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 ($input-range-thumb-size / 2);
+    position: absolute;
+    width: 100%;
+
+    @if ($input-range-steps-below-track == true) {
+      padding-top: $input-range-space-between-track-and-steps;
+      top: $input-range-track-height;
+    } @else {
+      top: -($input-range-step-height + $input-range-space-between-track-and-steps);
+    }
+  }
+  .rangeslider__ruler__step {
+    background-color: $input-range-track-color;
+    flex: 0 0 auto;
+    height: $input-range-step-height;
+    overflow: visible;
+    text-align: center;
+    width: 2px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @if mixin_exists(input-range-step) {
+      @include input-range-step;
+    }
+  }
+} @else {
+  .rangeslider__ruler {
+    display: none;
+  }
+}
+.rangeslider + .fc-numeric-outcome {
+  display: inline-block;
+  position: relative;
+
+  @if $input-range-show-steps {
+    margin-top: $input-range-space-before-value + $input-range-step-height;
+  } @else {
+    margin-top: $input-range-space-before-value;
+  }
+
+  @if mixin_exists(input-range-outcome) {
+    @include input-range-outcome;
+  }
+}

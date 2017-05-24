@@ -1,0 +1,82 @@
+@import '../mixins';
+@import '../theme';
+
+$input-checkbox-size: 20px !default;
+$input-checkbox-border-width: 1px !default;
+$input-checkbox-space-between-inner-check: 3px !default;
+
+// Checkbox fields
+input[type=checkbox] {
+  display: none;
+}
+input[type=radio] + label:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+input[type=checkbox] + label {
+  display: block;
+}
+input[type=checkbox] + label:hover {
+  cursor: pointer;
+}
+input[type=checkbox] + label > span:first-child {
+  background: #fff;
+  border-radius: 0;
+  border: $input-checkbox-border-width solid $secondary-color;
+  cursor: pointer;
+  display: inline-block;
+  height: $input-checkbox-size;
+  margin-right: $element-space-between-label;
+  padding: $input-checkbox-space-between-inner-check;
+  vertical-align: middle;
+  width: $input-checkbox-size;
+
+  @if mixin_exists(input-checkbox) {
+    @include input-checkbox;
+  }
+
+  & > b > i {
+    background-color: $secondary-color;
+    position: absolute;
+    visibility: hidden;
+  }
+}
+input[type=checkbox]:checked + label > span:first-child {
+  @if mixin_exists(input-checkbox-checked) {
+    @include input-checkbox-checked;
+  }
+}
+input[type=checkbox]:checked + label > span:first-child > b {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 100%;
+}
+input[type=checkbox]:checked + label > span:first-child > b > i {
+  visibility: visible;
+
+  @if mixin_exists(input-checkbox-inner-checked) {
+    @include input-checkbox-inner-checked;
+  }
+}
+input[type=checkbox]:checked + label > span:first-child > b > i:first-child {
+  width: 3px;
+  height: 9px;
+  left: 4px;
+  top: 4px;
+}
+input[type=checkbox]:checked + label > span:first-child > b > i:last-child {
+  width: 3px;
+  height: 3px;
+  left: 1px;
+  top: 10px;
+}
+
+// Checkbox list
+.fc-field.fc-field-checkboxList {
+  margin-bottom: $space-after-checkbox-list-item;
+  margin-top: $space-before-checkbox-list-item;
+}

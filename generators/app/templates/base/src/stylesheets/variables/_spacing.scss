@@ -1,0 +1,58 @@
+// Page
+$space-around-page: 10px !default;
+$space-before-page: $space-around-page !default;
+$space-after-page: $space-around-page !default;
+
+// Section
+$space-around-section: 10px !default;
+$space-before-section: $space-around-section !default;
+$space-after-section: $space-around-section !default;
+
+// Heading
+$space-around-heading: 10px !default;
+$space-before-heading: $space-around-heading !default;
+$space-after-heading: $space-around-heading !default;
+
+// Field
+// - Wrapper
+$space-around-field: 25px !default;
+$space-before-field: $space-around-field !default;
+$space-after-field: $space-around-field !default;
+
+// - Label
+$space-around-field-label: 5px !default;
+$space-before-field-label: $space-around-field-label !default;
+$space-after-field-label: $space-around-field-label !default;
+
+// - Description
+$space-around-field-description: 5px !default;
+$space-before-field-description: $space-around-field-description !default;
+$space-after-field-description: $space-around-field-description !default;
+
+// - Input element
+$space-around-field-input: 5px !default;
+$space-before-field-input: $space-around-field-input !default;
+$space-after-field-input: $space-around-field-input !default;
+
+// - Error text
+$space-around-field-error: 5px !default;
+$space-before-field-error: $space-around-field-error !default;
+$space-after-field-error: $space-around-field-error !default;
+
+// - Checkbox list fields
+$space-around-checkbox-list-item: 5px !default;
+$space-before-checkbox-list-item: $space-around-checkbox-list-item !default;
+$space-after-checkbox-list-item: $space-around-checkbox-list-item !default;
+
+// - Inline element/label (e.g. radio, checkbox inputs)
+$element-space-between-label: 10px !default;
+
+// - Help
+$space-around-field-help: 5px !default;
+$space-before-field-help: $space-around-field-help !default;
+$space-after-field-help: $space-around-field-help !default;
+
+// Button
+$space-around-button: 5px !default;
+$space-before-button: $space-around-button !default;
+$space-after-button: $space-around-button !default;

@@ -1,0 +1,41 @@
+@import '../mixins';
+@import '../theme';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: $space-after-heading;
+  margin-top: $space-before-heading;
+
+  @if mixin_exists(heading) {
+    @include heading;
+  }
+}
+h1 {
+  @if mixin_exists(primary-heading) {
+    @include primary-heading;
+  }
+}
+h2 {
+  @if mixin_exists(secondary-heading) {
+    @include secondary-heading;
+  }
+}
+h3 {
+  @if mixin_exists(tertiary-heading) {
+    @include tertiary-heading;
+  }
+}
+h4 {
+  @if mixin_exists(h4-heading) {
+    @include h4-heading;
+  }
+}
+label {
+  @if mixin_exists(label) {
+    @include label;
+  }
+}

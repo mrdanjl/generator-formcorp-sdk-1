@@ -1,0 +1,83 @@
+@import '../theme';
+
+$progress-bar-size: 19px !default;
+$progress-bar-node-link-height: 3px !default;
+
+.fc-progress-bar-container {
+  animation: none;
+  background-color: #fff;
+  box-shadow: none;
+  margin: 0 auto;
+  padding: 25px 0;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+
+  @if mixin_exists(progress-bar-container) {
+    @include progress-bar-container;
+  }
+}
+.fc-progress-bar-container .fc-step-count {
+  color: #555;
+  font-family: $primary-display-font;
+  font-size: 14px;
+  padding-bottom: 8px;
+
+  @if mixin_exists(progress-bar-step-count) {
+    @include progress-bar-step-count;
+  }
+}
+.fc-progress-bar {
+  max-width: 1150px;
+  margin: 0 auto;
+  height: $progress-bar-size;
+  padding-right: $progress-bar-size;
+  position: relative;
+  width: 100%;
+}
+.fc-progress-bar:after {
+  background-color: #dedede;
+  content: '';
+  height: $progress-bar-node-link-height;
+  left: 0;
+  position: absolute;
+  top: calc(50% - #{($progress-bar-node-link-height / 2)});
+  width: 100%;
+  z-index: 2;
+
+  @if mixin_exists(progress-bar-node-link) {
+    @include progress-bar-node-link;
+  }
+}
+.fc-progress-bar .progress-bar-group {
+  background-color: #fff;
+  border: 3px solid #dedede;
+  border-radius: 50%;
+  height: $progress-bar-size;
+  position: absolute;
+  transform: none !important;
+  width: $progress-bar-size;
+  z-index: 10;
+
+  @if mixin_exists(progress-bar-node) {
+    @include progress-bar-node;
+  }
+}
+.fc-progress-bar .progress-bar-current-group {
+  background-color: $secondary-color;
+  border: 4px solid $secondary-color;
+  box-sizing: border-box;
+  height: $progress-bar-size;
+  width: $progress-bar-size;
+
+  @if mixin_exists(progress-bar-current-node) {
+    @include progress-bar-current-node;
+  }
+}
+.fc-progress-bar .progress-bar-label {
+  display: none;
+
+  @if mixin_exists(progress-bar-node-label) {
+    @include progress-bar-node-label;
+  }
+}

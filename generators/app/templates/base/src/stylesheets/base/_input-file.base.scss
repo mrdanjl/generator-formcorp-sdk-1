@@ -1,0 +1,28 @@
+.fc-field-fileUpload .fc-btn {
+  margin: 0;
+
+  @if mixin_exists(file-upload-button) {
+    @include file-upload-button;
+  }
+}
+.fc-file-list {
+  margin: 8px 0;
+
+  @if mixin_exists(file-upload-list) {
+    @include file-upload-list;
+  }
+}
+.fc-file-upload-list-item {
+  margin: 8px 0;
+
+  @if mixin_exists(file-upload-list-item) {
+    @include file-upload-list-item;
+  }
+}
+.fc-delete-file-upload {
+  display: inline-block;
+
+  @if mixin_exists(file-upload-list-item-delete) {
+    @include file-upload-list-item-delete;
+  }
+}

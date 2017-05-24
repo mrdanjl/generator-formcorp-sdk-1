@@ -1,0 +1,26 @@
+@import '../theme';
+
+.fc-radio-option-buttons .fc-inline {
+  padding: 0;
+}
+.fc-radio-option-buttons .fc-button {
+  @include spacing($space-before-button, $space-after-button);
+
+  line-height: normal;
+  margin-right: 10px;
+
+  @if mixin_exists(button) {
+    @include button;
+  }
+  @if mixin_exists(button-secondary) {
+    @include button-secondary;
+  }
+  @if mixin_exists(input-radio-button) {
+    @include input-radio-button;
+  }
+}
+.fc-radio-option-buttons .fc-button.checked {
+  @if mixin_exists(input-radio-button-checked) {
+    @include input-radio-button-checked;
+  }
+}

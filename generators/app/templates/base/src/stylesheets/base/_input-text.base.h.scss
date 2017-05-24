@@ -1,0 +1,14 @@
+////
+/// @group Input base (text, select)
+////
+
+/// Define this mixin to set additional properties on all text-based inputs.
+@mixin input-text {}
+
+/// Define this mixin to set additional properties on all text-based inputs
+/// in a success state.
+@mixin input-text-success {}
+
+/// Define this mixin to set additional properties on all text-based inputs
+/// in an error state.
+@mixin input-text-error {}

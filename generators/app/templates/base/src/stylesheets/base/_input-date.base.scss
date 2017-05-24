@@ -1,0 +1,12 @@
+.fc-field-date .fc-fieldinput + i {
+  height: 100%;
+  padding-right: 16px;
+  right: 0;
+  top: -1px;
+}
+.fc-field-date .fc-fieldinput + i:after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}

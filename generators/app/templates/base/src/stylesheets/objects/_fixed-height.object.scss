@@ -1,0 +1,19 @@
+.fixed-height {
+  overflow-y: auto;
+
+  @if mixin_exists(fixed-height) {
+    @include fixed-height;
+  }
+}
+
+$max: 500;
+$step: 50;
+
+@for $i from 1 through ceil($max / $step) {
+  $value: ($i - 1) * $step;
+
+  .fixed-height-#{$value} .fc-richtext {
+    @extend .fixed-height;
+    max-height: #{$value}px;
+  }
+}

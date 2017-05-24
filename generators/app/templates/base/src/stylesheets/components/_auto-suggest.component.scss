@@ -1,0 +1,15 @@
+.fc-auto-suggest {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+
+  @if mixin_exists(auto-suggest) {
+    @include auto-suggest;
+  }
+}
+.fc-auto-suggest .fc-suggest-row > a {
+  @if mixin_exists(auto-suggest-row) {
+    @include auto-suggest-row;
+  }
+}

@@ -1,0 +1,45 @@
+@import 'functions';
+@import 'mixins';
+@import 'variables/spacing';
+@import 'variables/default';
+@import 'theme';
+
+.fc-container.fc-form-loaded {
+  // Base
+  @import 'base/input-checkbox.base';
+  @import 'base/input-date.base';
+  @import 'base/input-file.base';
+  @import 'base/input-radio.base';
+  @import 'base/input-radio-buttons.base';
+  @import 'base/input-range.base';
+  @import 'base/input-text.base';
+  @import 'base/select.base';
+  @import 'base/typography.base';
+
+  // Objects
+  @import 'objects/button.object';
+  @import 'objects/fixed-height.object';
+  @import 'objects/field-state-box.object';
+  @import 'objects/input-prefix-suffix.object';
+  @import 'objects/select.object';
+  @import 'objects/spacing.object';
+
+  // Components
+  @import 'components/auto-suggest.component';
+  @import 'components/field.component';
+  @import 'components/help.component';
+  @import 'components/input-range.component';
+  @import 'components/modal.component';
+  @import 'components/progress-bar.component';
+  @import 'components/user-feedback.component';
+}
+
+#fc-modal .modal-dialog {
+  background: #fff;
+  border-radius: 0;
+  left: 50%;
+  margin-left: -300px;
+  position: fixed;
+  width: 600px;
+  z-index: 11;
+}

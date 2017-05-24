@@ -1,0 +1,88 @@
+@import '../theme';
+
+$input-range-color: $secondary-color !default;
+$input-range-size: 3px !default;
+$input-range-thumb-size: 20px !default;
+$input-range-track-height: $input-range-size !default;
+$input-range-border-width: $input-range-size !default;
+$input-range-space-before-value: 8px !default;
+
+@mixin input-range-thumb-default {
+  background-color: #fff;
+  border: $input-range-border-width solid $input-range-color;
+  border-radius: 50%;
+  height: $input-range-thumb-size;
+  margin-top: #{calc((-#{$input-range-thumb-size} / 2) + 2px)};
+  width: $input-range-thumb-size;
+  z-index: 1000;
+
+  @if mixin_exists(input-range-thumb) {
+    @include input-range-thumb;
+  }
+}
+@mixin input-range-track-default {
+  background-color: $input-range-color;
+  cursor: pointer;
+  height: $input-range-size;
+  width: 100%;
+
+  @if mixin_exists(input-range-track) {
+    @include input-range-track;
+  }
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  border: none;
+  width: 100%
+}
+input[type=range]:focus {
+  outline: none
+}
+input[type=range]::-moz-range-thumb {
+  @include input-range-thumb-default;
+}
+input[type=range]::-moz-range-track {
+  @include input-range-track-default;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @include input-range-thumb-default;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  @include input-range-track-default;
+}
+input[type=range]::-ms-track {
+  background-color: transparent;
+  border: (($input-range-thumb-size / 2) + $input-range-border-width) solid transparent;
+  color: transparent;
+  height: $input-range-track-height;
+}
+input[type=range]::-ms-thumb {
+  @include input-range-thumb-default;
+  margin-top: 0;
+}
+input[type=range]::-ms-fill-lower {
+  background-color: $input-range-color;
+  border-radius: 11px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #333;
+  border-radius: 11px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: $input-range-color;
+  border-radius: $input-range-track-height / 2;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ccc;
+}
+input[type=range] + .fc-numeric-outcome {
+  display: inline-block;
+  position: relative;
+  top: $input-range-space-before-value;
+
+  @if mixin_exists(input-range-outcome) {
+    @include input-range-outcome;
+  }
+}

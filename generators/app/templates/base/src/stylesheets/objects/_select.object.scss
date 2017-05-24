@@ -1,0 +1,14 @@
+@if mixin_exists(select) {
+  .fc-field-dropdown .fc-fieldinput {
+    @include select;
+  }
+}
+
+@if mixin_exists(select-icon) {
+  .fc-field-dropdown .fc-field-element-container {
+    position: relative;
+  }
+  .fc-field-dropdown .fc-field-element-container::after {
+    @include select-icon;
+  }
+}

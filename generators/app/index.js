@@ -1,7 +1,8 @@
 'use strict';
 const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
+const chalk     = require('chalk');
+const yosay     = require('yosay');
+const mkdirp    = require('mkdirp');
 
 module.exports = class extends Generator {
   initializing() {
@@ -13,6 +14,11 @@ module.exports = class extends Generator {
 
   prompting() {
     return this.prompt([{
+      type    : 'input',
+      name    : 'name',
+      message : 'Project name',
+      default : this.appname,
+    },{
       type    : 'input',
       name    : 'formcorpId',
       message : 'Formcorp ID',
@@ -27,12 +33,7 @@ module.exports = class extends Generator {
       name    : 'sdkVersion',
       message : 'SDK version',
       default : '0.4.3',
-    }, {
-      type    : 'list',
-      name    : 'branch',
-      message : 'Branch',
-      choices : ['Development', 'Staging', 'Live'],
-    }, {
+    },{
       type    : 'list',
       name    : 'pageStyle',
       message : 'Page style',
@@ -42,15 +43,34 @@ module.exports = class extends Generator {
     });
   }
 
+  configuring() {
+    this.destinationRoot(this.destinationPath(this.props.name));
+  }
+
   writing() {
-    this.log(this.props);
-    /*this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );*/
+    mkdirp(this.destinationPath(), err => {
+      if (err) {
+        this.log(chalk.red(err));
+      } else {
+        this.log(`Working directory: ${chalk.blue(this.destinationPath())}`);
+
+        // copy base
+        this.fs.copyTpl(
+          this.templatePath('base/**/*'),
+          this.destinationPath(),
+          this.props
+        );
+
+        this.fs.copy(
+          this.templatePath('base/.*'),
+          this.destinationPath()
+        );
+
+      }
+    });
   }
 
   install() {
-    //this.installDependencies();
+    this.installDependencies({ bower: false });
   }
 };

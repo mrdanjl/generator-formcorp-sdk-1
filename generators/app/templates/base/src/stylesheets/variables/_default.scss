@@ -1,0 +1,37 @@
+$primary-color: #2B303A !default;
+$primary-font: 'Helvetica Neue', 'Helvetica', sans-serif !default;
+
+$secondary-color: #415A77 !default;
+$tertiary-color: #778DA9 !default;
+
+$default-border: 1px solid $primary-color !default;
+$default-border-radius: 2px !default;
+
+$primary-display-font: 1 !default;
+
+// Errors
+$error-color: #D64933 !default;
+
+// Text
+$text-color: $primary-color !default;
+$text-font-family: $primary-font !default;
+$text-font-size: 16px !default;
+
+// Field states
+$success-icon-color: #2B303A !default;
+
+// Radio input
+$input-radio-border-width: 2px !default;
+
+// Checkbox input
+$input-checkbox-border-width: 2px !default;
+
+// Range input
+$input-range-size: 3px !default;
+$input-range-thumb-size: 20px !default;
+
+// Buttons
+$space-around-button: 1.5em !default;
+
+// Field state boxes
+$success-box-color: #136F63 !default;

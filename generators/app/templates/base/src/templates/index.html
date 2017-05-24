@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title><%= name %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js" charset="utf-8"></script>
+<!-- Formcorp -->
+<!-- inject:css -->
+<!-- endinject -->
+<div id="formcorp-form" data-id="<%= formcorpId %>">
+  <div class="loading">&nbsp;</div>
+</div>
+<script src="https://rawgit.com/formcorp/js-formcorp/484a5bcfc00e6830c1ab431c712b2d740fb07cfa/formcorp.js" charset="utf-8" id="fc-js-include"></script>
+<script type="text/javascript">
+var fc = formcorp.create('Form');
+
+fc.setBranch("Development");
+fc.setConfig({
+  realTimeValidation: true,
+  timeUserOut: false,
+  saveInRealTime: true,
+  <% if (pageStyle === 'Single page') { %>onePage: true,<% } else { %>onePage: false,<% } %>
+  smoothScroll: false,
+  autoLoadPages: false,
+  autoScrollToNextField: true,
+  descriptionBeforeLabel: false,
+  scrollOffset: -100,
+  deleteSessionOnComplete: true,
+  scrollOnSubmitError: true,
+  helpAsModal: true,
+  staticHelpModalLink: true,
+  updateHash: false,
+  forceGreenID: true,
+  baseCssFile: 'new-formcorp.css',
+});
+
+fc.setAsDevelopmentMode();
+fc.setApiUrl('https://api.formcorp.com.au/');
+fc.setCdnUrl('https://rawgit.com/formcorp/js-formcorp/484a5bcfc00e6830c1ab431c712b2d740fb07cfa/');
+fc.init('<%= authenticationKey %>', 'formcorp-form');
+</script>
+<!-- inject:js -->
+<!-- endinject -->
+<!-- // Formcorp -->
+</body>
+</html>
