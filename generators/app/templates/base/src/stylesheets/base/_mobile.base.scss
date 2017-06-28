@@ -1,0 +1,463 @@
+//the base code and fix code for the form mobile
+//@media only screen and (max-width: 1250px) {
+
+
+
+@media all and (max-width: 1210px) and (min-width: 500px) {
+  .fc-container.fc-form-loaded{
+    margin:0 auto!important;
+    position: relative;
+    top:0!important;
+    left:0!important;
+    width:90%;
+
+  }
+
+  .fc-container.fc-form-loaded .fc-repeatable{
+    width:100%!important;
+
+  }
+
+  .fc-progress-bar-container{
+
+    padding:20px!important;
+    position:fixed;
+    top: 0px !important;
+    left:0;
+    width:100%!important;
+    -webkit-backface-visibility: hidden!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-progress-bar-container{
+    height:95px;
+
+  }
+
+  .fc-progress-bar-container .fc-progress-bar .fc-steps-bar .progress-bar-group .progress-bar-label{
+    top:38px!important;
+
+  }
+  .render{
+    padding-top:55px!important;
+
+  }
+
+  h1 {
+
+
+    line-height: 50px!important;
+    margin:50px 0 23px 0!important;
+
+
+  }
+
+
+}
+
+
+
+@media only screen and (max-width: 500px) and (min-width: 350px) {
+
+  .fc-container.fc-form-loaded{
+    margin:0 auto!important;
+    position: relative;
+    top:0!important;
+    left:0!important;
+    width:90%;
+
+  }
+
+  .fc-container.fc-form-loaded .fc-repeatable{
+    width:100%!important;
+
+  }
+
+  .fc-progress-bar-container{
+
+    padding:20px!important;
+    position:fixed;
+    top:0px !important;
+    left:0;
+    width:100%!important;
+    -webkit-backface-visibility: hidden!important;
+    display: none!important;
+  }
+
+
+  .fc-container.fc-form-loaded .fc-progress-bar-container{
+    height:70px;
+
+  }
+
+  .fc-progress-bar-container .fc-progress-bar .fc-steps-bar .progress-bar-group .progress-bar-label{
+    top:38px!important;
+
+  }
+
+
+  .render{
+    padding-top:0px!important;
+
+  }
+
+  .fc-steps-bar .progress-bar-group .progress-bar-label{
+
+    display:none!important;
+
+  }
+
+
+  h1 {
+
+    //font size and color
+    color:$h1-color;
+    font-size:($h1-size/2+3)!important;
+    margin:40px 0 10px 0!important;
+    font-family: $h1-font-family;
+    line-height: 50px!important;
+
+
+
+  }
+
+
+  h2 {
+
+    //font size and color
+    color:$h2-color;
+    font-size:($h2-size - 6)!important;
+    font-family: $h2-font-family;
+    line-height: 26px!important;
+    margin:5px 0 5px 0!important;
+
+
+  }
+
+  h3 {
+
+
+    margin:5px 0 7px 0!important;
+
+
+  }
+
+  h4 {
+
+    //font size and color
+    line-height: 26px!important;
+    margin:5px 0 5px 0!important;
+    font-size: 18px!important;
+
+  }
+  .fc-container.fc-form-loaded .fc-section-desc p{
+    margin:0 0 0 0!important;
+
+  }
+
+  .fc-container.fc-form-loaded input[type="range"].fc-fieldinput{
+    width:70%!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-click.fc-add{
+    margin: 0 !important;
+
+  }
+
+  .fc-container.fc-form-loaded .fc-click.fc-remove{
+    margin: 5px 0 0 0!important;
+
+  }
+
+
+  .fc-field-radioList .fc-fieldgroup .fc-field-element-container .fc-block label{
+    width:100%;
+
+  }
+
+  .fc-field-radioList .fc-fieldgroup .fc-field-element-container .fc-block label em{
+    width:90%;
+  }
+
+
+  .fc-field-checkboxList .fc-fieldgroup .fc-field-element-container .fc-block label{
+    width:100%;
+
+  }
+
+  .fc-field-checkboxList .fc-fieldgroup .fc-field-element-container .fc-block label em{
+    width:90%;
+  }
+
+  .fc-content-radio-item{
+    width:100%!important;
+
+  }
+
+  .fc-content-radio-item .fc-content-title{
+    padding:20px 10px 10px 10px!important;
+
+  }
+
+  .fc-add{
+    float:none!important;
+
+  }
+  .fc-remove{
+
+    float:none!important;
+    padding-left:0!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-prev-page .fc-btn{
+    float:none!important;
+    margin-bottom:5px!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-prev-page{
+
+    margin-bottom:5px!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-submit .fc-btn{
+    float:none!important;
+  }
+
+
+  .modal-dialog{
+    width:90%!important;
+    height: $modal-height;
+
+    background-color:$modal-back-color;
+    border-radius: $modal-radius ! important;
+    box-shadow:$modal-box-shadow;
+    left:5%!important;
+    margin:0 auto!important;
+  }
+
+
+
+  //try fixing table
+
+
+  .fc-form-summary .fc-table{
+    width:100%!important;
+    margin:auto!important;
+
+
+    table-layout:fixed!important;
+
+  }
+
+
+  .fc-container.fc-form-loaded .fc-auto-suggest .fc-suggest-row{
+    height:auto!important;
+
+  }
+
+
+
+}
+
+
+
+//for iphone 5 and other small device
+@media only screen and (max-width: 350px) {
+
+  .fc-container.fc-form-loaded{
+    margin:0 auto!important;
+    position: relative;
+    top:0!important;
+    left:0!important;
+    width:90%;
+
+  }
+
+  .fc-container.fc-form-loaded .fc-repeatable{
+    width:100%!important;
+
+  }
+
+  .fc-progress-bar-container{
+
+    padding:20px!important;
+    position:fixed;
+    top:0px !important;
+    left:0;
+    width:100%!important;
+    -webkit-backface-visibility: hidden!important;
+    display: none!important;
+  }
+
+
+  .fc-container.fc-form-loaded .fc-progress-bar-container{
+    height:70px;
+
+  }
+
+  .fc-progress-bar-container .fc-progress-bar .fc-steps-bar .progress-bar-group .progress-bar-label{
+    top:38px!important;
+
+  }
+
+
+  .render{
+    padding-top:0px!important;
+
+  }
+
+  .fc-steps-bar .progress-bar-group .progress-bar-label{
+
+    display:none!important;
+
+  }
+
+
+  h1 {
+
+    //font size and color
+    color:$h1-color;
+    font-size:($h1-size/2+3)!important;
+    margin:40px 0 15px 0!important;
+    font-family: $h1-font-family;
+    line-height: 33px!important;
+
+
+
+  }
+
+
+  h2 {
+
+    //font size and color
+    color:$h2-color;
+    font-size:($h2-size - 6)!important;
+    font-family: $h2-font-family;
+    line-height: 26px!important;
+    margin:5px 0 5px 0!important;
+
+
+  }
+
+  h3 {
+
+
+    margin:5px 0 7px 0!important;
+
+
+  }
+
+  h4 {
+
+    //font size and color
+    line-height: 26px!important;
+    margin:5px 0 5px 0!important;
+    font-size: 18px!important;
+
+
+  }
+  .fc-container.fc-form-loaded .fc-section-desc p{
+    margin:0 0 0 0!important;
+
+  }
+  .fc-container.fc-form-loaded input[type="range"].fc-fieldinput{
+    width:65%!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-click.fc-add{
+    margin: 0 !important;
+
+  }
+
+  .fc-container.fc-form-loaded .fc-click.fc-remove{
+    margin: 5px 0 0 0!important;
+
+  }
+
+
+  .fc-field-radioList .fc-fieldgroup .fc-field-element-container .fc-block label{
+    width:100%;
+
+  }
+
+  .fc-field-radioList .fc-fieldgroup .fc-field-element-container .fc-block label em{
+    width:80%;
+  }
+
+
+  .fc-field-checkboxList .fc-fieldgroup .fc-field-element-container .fc-block label{
+    width:100%;
+
+  }
+
+  .fc-field-checkboxList .fc-fieldgroup .fc-field-element-container .fc-block label em{
+    width:80%;
+  }
+
+  .fc-content-radio-item{
+    width:100%!important;
+
+  }
+
+  .fc-content-radio-item .fc-content-title{
+    padding:20px 10px 10px 10px!important;
+
+  }
+
+  .fc-add{
+    float:none!important;
+
+  }
+  .fc-remove{
+
+    float:none!important;
+    padding-left:0!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-prev-page .fc-btn{
+    float:none!important;
+    margin-bottom:5px!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-prev-page{
+
+    margin-bottom:5px!important;
+  }
+
+  .fc-container.fc-form-loaded .fc-submit .fc-btn{
+    float:none!important;
+  }
+
+
+  .modal-dialog{
+    width:90%!important;
+    height: $modal-height;
+
+    background-color:$modal-back-color;
+    border-radius: $modal-radius ! important;
+    box-shadow:$modal-box-shadow;
+    left:5%!important;
+    margin:0 auto!important;
+  }
+
+
+
+  //try fixing table
+
+
+  .fc-form-summary .fc-table{
+    width:100%!important;
+    margin:auto!important;
+
+
+    table-layout:fixed!important;
+
+  }
+
+  .fc-container.fc-form-loaded .fc-auto-suggest .fc-suggest-row{
+    height:auto!important;
+
+  }
+
+
+}
+

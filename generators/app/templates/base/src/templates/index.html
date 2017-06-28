@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title><%= name %></title>
+  <title>test_unibank</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -11,37 +11,66 @@
 <!-- Formcorp -->
 <!-- inject:css -->
 <!-- endinject -->
-<div id="formcorp-form" data-id="<%= formcorpId %>">
+<div id="formcorp-form" data-id="256">
   <div class="loading">&nbsp;</div>
 </div>
 <script src="https://rawgit.com/formcorp/js-formcorp/484a5bcfc00e6830c1ab431c712b2d740fb07cfa/formcorp.js" charset="utf-8" id="fc-js-include"></script>
+
 <script type="text/javascript">
-var fc = formcorp.create('Form');
+  var fc = formcorp.create('Form');
 
-fc.setBranch("Development");
-fc.setConfig({
-  realTimeValidation: true,
-  timeUserOut: false,
-  saveInRealTime: true,
-  <% if (pageStyle === 'Single page') { %>onePage: true,<% } else { %>onePage: false,<% } %>
-  smoothScroll: false,
-  autoLoadPages: false,
-  autoScrollToNextField: true,
-  descriptionBeforeLabel: false,
-  scrollOffset: -100,
-  deleteSessionOnComplete: true,
-  scrollOnSubmitError: true,
-  helpAsModal: true,
-  staticHelpModalLink: true,
-  updateHash: false,
-  forceGreenID: true,
-  baseCssFile: 'new-formcorp.css',
-});
+  fc.setBranch("Development");
+  var developmentMode = false;
 
-fc.setAsDevelopmentMode();
-fc.setApiUrl('https://api.formcorp.com.au/');
-fc.setCdnUrl('https://rawgit.com/formcorp/js-formcorp/484a5bcfc00e6830c1ab431c712b2d740fb07cfa/');
-fc.init('<%= authenticationKey %>', 'formcorp-form');
+  fc.setConfig({
+    realTimeValidation: true,
+    timeUserOut: false,
+    saveInRealTime: true,
+    onePage: true,
+    smoothScroll: false,
+    autoLoadPages: false,
+    autoScrollToNextField: true,
+    descriptionBeforeLabel: false,
+    scrollOffset: -100,
+    deleteSessionOnComplete: true,
+    scrollOnSubmitError: true,
+    helpAsModal: true,
+    staticHelpModalLink: true,
+    updateHash: false,
+    forceGreenID: true,
+    baseCssFile: 'new-formcorp.css',
+    progressBar: {
+      'Stage 1': {
+        '56f32a1bc79f6e7c2c8b6752': '',
+      },
+      'Stage 2': {
+        '56f32a35c79f6e7b2c8b6883': '',
+      },
+      'Stage 3': {
+        '591ba2f3c21f9629181d4067': '',
+      },
+      'Stage 4': {
+        '591ba9cfc21f9629667d806c': '',
+      },
+      'Stage 5': {
+        '591baca9c21f9629a26f752f': '',
+      },
+    },
+  });
+
+
+
+
+  fc.setLanguage({
+    helpModalLink: '',
+  });
+
+  fc.setAsDevelopmentMode();
+  fc.setApiUrl('https://api.formcorp.com.au/');
+  fc.setCdnUrl('https://rawgit.com/formcorp/js-formcorp/master/');
+  fc.init('F5931d1ff072D1E194F91624f867112ffC1eA803208Eb82cA6b33D04a69B8ecb', 'formcorp-form');
+
+
 </script>
 <!-- inject:js -->
 <!-- endinject -->

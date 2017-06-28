@@ -1,0 +1,112 @@
+//the table
+.fc-form-summary .fc-table{
+  border:$table-border;
+  border-radius:$table-radius;
+  border-spacing: 0!important;
+  margin:$table-margin;
+  max-width:909px;
+}
+
+
+
+.fc-form-summary .fc-table th{
+
+  padding: $table-th-padding;
+  border-right: $table-tr-border;
+  height: $table-row-height;
+}
+
+.fc-form-summary .fc-table td{
+  padding: $table-td-padding;
+  border-top:$table-tr-border;
+  border-right: $table-tr-border;
+  min-height: $table-row-height;
+  -ms-word-wrap:break-word;
+  word-wrap:break-word;
+  overflow: hidden;
+  max-width:496px;
+}
+
+
+.fc-form-summary .fc-table thead{
+  height:$table-header-height;
+  color:$table-header-font-color;
+  background-color:$table-header-back-color;
+  font-size:$table-header-font-size;
+
+
+}
+
+.fc-form-summary .fc-table thead tr th:last-child{
+  border-right:0px solid $line-stroke-color;
+
+
+}
+
+
+.fc-form-summary .fc-table thead tr{
+  height:$table-header-height;
+  color:$table-header-font-color;
+  background-color:$table-header-back-color;
+  font-size:$table-header-font-size;
+
+
+}
+
+.fc-form-summary .fc-table thead tr th:first-child{
+  height:$table-header-height;
+  border-radius: $table-radius 0 0 0!important;
+
+}
+.fc-form-summary .fc-table thead tr th:last-child{
+  height:$table-header-height;
+  border-radius: 0 $table-radius 0 0!important;
+
+}
+
+.fc-form-summary .fc-table tbody th{
+  height:$table-header-height;
+  color:$table-header-font-color;
+  background-color:$table-header-back-color;
+  font-size:$table-header-font-size;
+  font-weight:normal;
+  border:$table-th-border;
+  border-top: $table-tr-border;
+  border-bottom:$table-th-border;
+}
+.fc-form-summary .fc-table tbody tr td:last-child{
+  font-weight:$table-info-font-weight;
+  color:$table-info-font-color;
+}
+.fc-form-summary .fc-table tbody tr td:first-child{
+  color:$table-info-font-des-color;
+
+}
+
+.fc-table thead{
+  display: none;
+
+}
+
+.fc-table tbody tr:first-child th{
+  border-radius: $table-radius $table-radius 0 0;
+  border-top:none;
+}
+
+.fc-table tbody tr:last-child {
+  display:none;
+}
+
+.fc-table tbody tr td:last-child {
+  border-right:0px solid $line-stroke-color;
+}
+
+
+.fc-form-summary .fc-table tbody tr:nth-child(odd){
+  background-color:$secondary-color;
+
+}
+.fc-form-summary .fc-table tbody tr:nth-child(even){
+  background-color:transparent;
+
+}

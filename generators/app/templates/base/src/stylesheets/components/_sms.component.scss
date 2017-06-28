@@ -1,0 +1,28 @@
+.fc-verify-sms-input-code{
+  width:$sms-verify-input-width;
+  float: left;
+}
+.fc-verify-sms-input{
+  width:100%;
+  z-index:33;
+}
+
+.fc-verify-sms-button{
+  width:170px;
+  float:left;
+  margin:$sms-verify-input-margin;
+
+}
+.fc-sms-verification{
+
+  padding:0 0 0 0;
+}
+.fc-btn.fc-sms-verification-verify{
+
+  z-index:33;
+
+}
+.fc-btn.fc-sms-verification-verify:hover{
+  background-color: $btn-hover-button;
+
+}

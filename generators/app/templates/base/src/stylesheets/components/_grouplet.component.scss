@@ -1,0 +1,17 @@
+//the grouplet style
+
+.fc-repeatable-row{
+
+  border:$grouplet-border;
+  padding:$grouplet-padding;
+
+  border-radius:$grouplet-border-radius;
+  overflow:hidden;
+  margin: $grouplet-margin;
+}
+
+.fc-repeatable{
+  width:$grouplet-width;
+  overflow:hidden;
+  margin: $grouplet-margin;
+}

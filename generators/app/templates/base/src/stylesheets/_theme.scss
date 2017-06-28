@@ -1,37 +1,409 @@
-$primary-color: #2B303A !default;
-$primary-font: 'Helvetica Neue', 'Helvetica', sans-serif !default;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300,200,100);
 
-$secondary-color: #415A77 !default;
-$tertiary-color: #778DA9 !default;
-
+// the base color and font
+// base color
+$primary-color: #7fcc42 !default;
+// secondary color
+$secondary-color:#eef2f4!default;
+// errors color
+$error-color: #f26f5d !default;
+// input field color
+$input-field-color:$secondary-color !default;
+// lines and strokes color
+$line-stroke-color:#d8e2e6 !default;
+// base font
+$primary-font: 'Open Sans' !default;
+// default border
 $default-border: 1px solid $primary-color !default;
 $default-border-radius: 2px !default;
-
 $primary-display-font: 1 !default;
+//footer margin
+$pre-end-page:30px 0;
+//white color
+$whitecolor:#fff;
+//help-link-color
+$help-link-font-color:#434d5f;
+//left float
+$pull-left:left;
 
-// Errors
-$error-color: #D64933 !default;
 
-// Text
+//texts
 $text-color: $primary-color !default;
 $text-font-family: $primary-font !default;
 $text-font-size: 16px !default;
+//the line height on the main body paragraphs
+$line-height-para:22px;
+//the header text on the form
+//the header
+$h1-color:#434d5f !default;
+$h1-size:50px !default;
+$h1-font-family:$primary-font!default;
+$h1-line-height:55px!default;
+//h1 margin
+$h1-margin:50px 0 15px 0!default;
+//the header title
+$h2-color:#434d5f !default;
+$h2-size:28px !default;
+$h2-font-family:$primary-font!default;
+$h2-line-height:30px;
+$h2-margin:10px 0 0 0!default;
+//the header description
+$h3-color:#5e6d7f !default;
+$h3-size:16px !default;
+$h3-font-family:$primary-font!default;
+$h3-line-height:20px;
+$h3-margin:15px 0 20px 0!default;
+//h4
+$h4-color:#434d5f!default;
+$h4-size:20px !default;
+$h4-font-family:$primary-font!default;
+$h4-line-height:25px;
+$h4-margin:13px 0 10px 0!default;
+//section des
+$section-des-color:#5e6d7f !default;
+$section-des-size:16px !default;
+$section-des-font-family:$primary-font!default;
+$section-des-line-height:20px;
+$section-des-margin:10px 0 10px 0!default;
+//normal text
+$regular-font-size:16px !default;
+$regular-font-height:20px !default;
+$regular-font-color:#434d5f !default;
 
+
+
+
+// input fields and labels
 // Field states
 $success-icon-color: #2B303A !default;
+//the success icon box color
+$success-box-icon-shadow:0px 2px 5px 0 rgba(0, 0, 0, 0.14);
+$error-box-icon-shadow:0px 2px 5px 0 rgba(0, 0, 0, 0.14);
+// Field state boxes
+$success-box-color: #fff !default;
+//input field
+$input-field-border:1px solid #fff!default;
+//the input box border radius and margin
+$input-radius:50px!default;
+//input field box shadow
+$input-field-box-shadow:0px 5px 21px 0 rgba(0, 0, 0, 0.07);
+//placeholder padding
+$input-field-padding:0 0 0 22px;
+$input-field-textarea-padding:17px 20px 20px 22px!important;
+//text area border radius
+$input-textarea-radius:20px;
+//text area height
+$input-textare-height:162.9px;
+//input margin
+$input-margin:5px 0 0 0!default;
+$input-height:48px!default;
+//input box focus
+$input-focus-border:2px solid #d8e2e6!default;
+//input box back
+$input-focus-back-color:#fff!default;
+//the inactive checkbox label color
+$checkbox-inactive-label-color:#8f98ad!default;
+//the selected checkbox label color
+$checkbox-selected-label-color:$primary-color!default;
+//the label bside the checkbox margin
+$checkbox-label-margin:5px 0 0 0!default;
+//single line text field header and description
+$field-label-font-color:#434d5f!default;
+$field-label-font-size:16px!default;
+$field-des-font-color:#7b8192!default;
+$field-des-font-size:16px!default;
+//success and error info color
+$succ-font-color:$primary-color!default;
+$succ-font-size:14px!default;
+$error-font-color:$error-color!default;
+$error-font-size:14px!default;
+//the tick icon size
+$tick-size:24px;
+//error message margin
+$error-margin:0 0 0 ($input-radius/2-2)!default;
+$error-icon-color: $error-color !default;
+//success box icon
+$success-icon-position:-30px;
+//error box icon
+$error-icon-position:-30px;
+//error box icon size
+$error-icon-size:24px;
+//fc field margin
+$fc-field-margin:5px 0 0 0!default;
+//single line text field header and description
+$field-label-margin:25px 0 0 0!default;
 
+
+
+
+
+//definition for buttons
+//radius of the button
+$btn-radius:50px !default;
+//height of button
+$btn-height:48px;
+//text style of the button
+$btn-text-color:#fff !default;
+//bold text
+$btn-text-bold:bold !default;
+//uppercase text
+$btn-text-uppercase:uppercase !default;
+//center text align
+$btn-text-center:center !default;
+//color of button when hover
+$btn-hover-darker:20%;
+$btn-hover-button:darken($primary-color,$btn-hover-darker) !default;
+
+//button width
+$btn-width:163px;
+$secondary-btn-hover-back-color:#FFFAFA!default;
 // Radio input
 $input-radio-border-width: 2px !default;
-
+//color of the radio input check
+$radio-color:$primary-color!default;
 // Checkbox input
 $input-checkbox-border-width: 2px !default;
-
+//checkbox check icon color
+$checkbox-icon-back:$primary-color!default;
+$checkbox-icon-color:#f7fafb!default;
+//checkbox icon border
+$checkbox-icon-border:2px solid $primary-color!important;
+//checkout shadow
+$checkbox-shadow:0px 2px 5px 0 rgba(1, 126, 255, 0.14)!default;
 // Range input
 $input-range-size: 3px !default;
 $input-range-thumb-size: 20px !default;
-
 // Buttons
 $space-around-button: 1.5em !default;
+//style of stroke
+$primary-stroke:1px solid $input-field-color !default;
+//drop down box icon option
+$dropdown-icon-color:  #acafbb;
+$dropdown-icon-content: "▾";
+$dropdown-icon-float: right;
+$dropdown-icon-font-size: 17px;
+$dropdown-icon-position: absolute;
+$dropdown-icon-to-right: 15px;
+$dropdown-icon-to-top: 18px;
+$dropdown-icon-z-index:9;
 
-// Field state boxes
-$success-box-color: #136F63 !default;
+
+
+
+
+//modal style
+//size of modal
+$modal-width:643px!default;
+$modal-height:361px!default;
+//modal header
+$modal-header-font-size:28px!default;
+$modal-header-line-height:1.36!default;
+$modal-header-text-align:center!default;
+$modal-header-color:#434d5f!default;
+//modal description
+$modal-des-font-size:16px!default;
+$modal-des-line-height:1.75!default;
+$modal-des-text-align:center!default;
+$modal-des-color:#434d5f!default;
+//modal other
+$modal-radius:8px!default;
+$modal-back-color:#fff!default;
+$modal-box-shadow: 0 14px 51px 0 rgba(0, 0, 0, 0.16)!default;
+$modal-header-padding:50px 15px 0px 15px!default;
+$modal-padding:25px 15px 0px 15px!default;
+
+
+
+//progress bar style
+$progress-bar-size: 35px !default;
+$progress-bar-node-link-height: 8px !default;
+$progress-bar-node-complete-border:3px solid $primary-color !default;
+$progress-bar-node-current-border:4px solid $primary-color !default;
+//the progress bar step count hide
+$progress-bar-step-count-display:none!default;
+$progress-bar-step-color:#5e6d7f;
+$progress-bar-bottom-shadow:0 0 1px rgba(0, 0, 0, .2), 0 0 15px rgba(0, 0, 0, .15);
+
+
+
+//the email input verify part
+$email-verify-input-width:359px!default;
+$email-verify-input-margin:0 7px!default;
+$email-send-button-back-color:#ffffff!default;
+$email-send-button-font-color:$primary-color!default;
+$email-send-button-border:2px solid $primary-color;
+//the sms input verify part
+$sms-verify-input-width:359px!default;
+$sms-verify-input-margin:0 0 0 7px!default;
+
+
+//the content radios part
+$content-radio-button-width:360px!default;
+$content-radio-button-height:315px!default;
+$content-radio-button-back-color:#eef2f4!default;
+$content-radio-button-radius:20px!default;
+$content-radio-button-border:1px solid #d8e2e6!default;
+$content-radio-btn-font-size:14px!default;
+$content-radio-btn-border:2px solid $primary-color!default;
+$content-radio-button-margin:20px 20px 0 0;
+//when hover
+$content-radio-button-hover-back-color:#ffffff!default;
+$content-radio-button-border:1px solid $primary-color!default;
+$content-radio-button-hover-border:1px solid $primary-color!default;
+$content-radio-btn-hover-font-size:14px!default;
+$content-radio-btn-hover-font-color:#ffffff!default;
+$content-radio-btn-hover-back-color:$primary-color!default;
+$content-radio-btn-hover-box-shadow:0px 2px 10px 0 rgba(81, 150, 26, 0.32);
+//selected
+$content-radio-select-back-color:#ffffff!default;
+$content-radio-select-header-font-color:$primary-color!default;
+$content-radio-select-header-font-color:#ffffff!default;
+$content-radio-select-body-font-color:#434d5f!default;
+$content-radio-btn-focus-font-color:#ffffff;
+//border of the header of the content
+$content-radio-button-border-bottom:1px solid #c4d0d6!default;
+//content radio title
+$content-radio-title-back-color:inherit;
+$content-radio-title-padding: 33px 0;
+$content-radio-title-text-align: center;
+$content-radio-title-font-size: 16px;
+$content-radio-title-font-weight:normal;
+$content-radio-title-border-radius: $content-radio-button-radius $content-radio-button-radius 0 0;
+$content-radio-title-border-bottom: inherit;
+$content-radio-title-height:81px;
+//content radio box
+$content-radio-body-padding:56px 30px 0 30px;
+
+
+//the table part
+$table-margin:25px 0!default;
+//header
+$table-header-height:35px!default;
+$table-header-back-color:$primary-color!default;
+$table-header-font-size:14px!default;
+$table-header-font-color:#ffffff!default;
+//th td
+$table-th-border:1px solid $primary-color;
+$table-row-height:45px!default;
+$table-row-back-color:#c4d0d6!default;
+$table-row-font-size:14px!default;
+$table-row-font-color:#434d5f!default;
+$table-radius:18px!default;
+$table-border:solid 1px #c4d0d6!default;
+$table-th-padding:5px 20px!default;
+$table-td-padding:10px 20px!default;
+//wire color between rows
+$table-wire-color:$line-stroke-color!default;
+$table-tr-border:1px solid $table-wire-color!default;
+//info font
+$table-info-font-weight:600!important;
+$table-info-font-color:#444d60!default;
+$table-info-font-des-color:#7b8192!default;
+
+
+
+
+//the grouplet part
+$grouplet-width:527px!default;
+$grouplet-back-color:#ffffff!default;
+$grouplet-border:1px solid #c4d0d6!default;
+$grouplet-padding:20px 40px 40px 40px!default;
+$grouplet-margin:10px 0!default;
+$grouplet-border-radius:20px!default;
+$grouplet-btn-secondary-back-color:#fff;
+
+//grouplet buttons
+$grouplet-button-padding:11px 14px!default;
+$grouplet-add-button-margin:10px 0 10px 40px!default;
+$grouplet-remove-button-margin:10px 0 10px 10px!default;
+$grouplet-remove-btn-border:2px solid $primary-color!default;
+$grouplet-remove-btn-hover-back-color:$primary-color;
+$grouplet-remove-btn-hover-color:$whitecolor;
+
+//previous page button
+$previous-btn-secondary-back-color:#fff;
+$previous-btn-border:2px solid $primary-color!default;
+$previous-btn-font-color:$primary-color;
+$previous-btn-hover-back-color:$primary-color;
+$previous-btn-hover-color:$whitecolor;
+
+//border of the privacy acknowledge part
+$privacy-box-border:1px solid $line-stroke-color!default;
+//padding of the privcy acknowledge part
+$privacy-box-padding:20px;
+$privacy-box-back-color:#f9fafb;
+$privacy-box-radius:20px;
+
+//auto-suggest box styling
+$auto-suggest-position: absolute;
+$auto-suggest-position-top:22px;
+$auto-suggest-width: 100%;
+$auto-suggest-z-index:10;
+$auto-suggest-border: 2px solid #d8e2e6;
+$auto-suggest-padding: 33px 0px 10px 0px;
+$auto-suggest-border-radius:0 0 25px 25px;
+$auto-suggest-border-top: 0 !important;
+$auto-suggest-box-shadow: 0px 5px 21px 0 rgba(0, 0, 0, 0.07);
+$auto-suggest-back-color: #FFFFFF !important;
+$auto-suggest-a-hover-color:$primary-color;
+$auto-suggest-row-height:37px!default;
+$auto-suggest-row-border:1px solid $line-stroke-color;
+$auto-suggest-row-padding-left:($input-radius/3-5);
+$auto-suggest-font-size: 14px;
+$auto-suggest-row-text-align: left;
+$auto-suggest-font-color: #48495f;
+
+
+//numberic slider style
+$number-slider-width:50%;
+$number-slider-webkit-appearance: none;
+$number-slider-height: 7px;
+$number-slider-display: inline-block;
+$number-slider-back-color: $primary-color;
+//hover
+$number-slider-hover-border:none;
+$number-slider-hover-back-color:$primary-color;
+//track bar
+$number-slider-track-back-color:transparent;
+//thumb
+$number-slider-thumb-height: 18px;
+$number-slider-thumb-width:18px;
+$number-slider-thumb-back-color: #ffffff;
+$number-slider-thumb-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.14);
+$number-slider-thumb-border: solid 1px #e8eff0;
+//slider number outcome
+$number-slider-number-top: 0px!important;
+$number-slider-number-left:10px;
+$number-slider-number-width: 62px;
+$number-slider-number-height: 41.9px;
+$number-slider-number-back-color: #eef2f4;
+$number-slider-number-font-size: 16px;
+$number-slider-number-line-height:2px;
+$number-slider-number-text-align: center;
+$number-slider-number-color: #434d5f;
+$number-slider-number-vertical-align: middle;
+$number-slider-number-padding:20px;
+$number-slider-number-webkit-border-radius:10px;
+$number-slider-number-moz-border-radius:10px;
+$number-slider-number-border-radius:10px;
+
+
+//help link hint styling
+$help-link-color: $line-stroke-color !default;
+$help-link-position: relative;
+$help-link-top: -2px;
+$help-link-left: 0px;
+$help-link-text-align: center;
+$help-link-width: 24px;
+$help-link-height: 24px;
+$help-link-font-size: 13px;
+$help-link-line-height: 26px;
+$help-link-cursor: default;
+$help-link-padding:1px 7px;
+$help-link-text-decoration: none;
+
+$help-link-mark-content:'?';
+$help-link-mark-font-size: 13px;
+$help-link-mark-width:6px;
+$help-link-mark-height:12px;
+$help-link-mark-color:$help-link-font-color;

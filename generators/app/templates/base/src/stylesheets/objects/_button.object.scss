@@ -1,30 +1,195 @@
 @import '../mixins';
 @import '../theme';
 
-.fc-btn {
+.fc-btn{
   @include spacing($space-before-button, $space-after-button);
 
   line-height: normal;
 
+  //the background color of the button
+  background-color:$primary-color;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$btn-text-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+
+  height: $btn-height;
+  min-width:$btn-width;
+
+
+
   @if mixin_exists(button) {
     @include button;
   }
+
 }
+
+//the buttons on the grouplet part
+.fc-click.fc-add{
+  line-height: normal;
+
+  //the background color of the button
+  background-color:$primary-color;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$btn-text-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+
+  height: $btn-height;
+  min-width: $btn-width;
+  float: $pull-left;
+  padding: $grouplet-button-padding;
+  margin:$grouplet-add-button-margin;
+
+}
+
+.fc-click.fc-add:hover{
+  background-color: $btn-hover-button;
+  box-shadow: 0px 2px 9px 0 rgba(0, 214, 100, 0.32);
+}
+
+.fc-click.fc-remove:hover{
+  background-color: $grouplet-remove-btn-hover-back-color;
+  color:$grouplet-remove-btn-hover-color;
+}
+
+.fc-click.fc-remove{
+  line-height: normal;
+
+  //the background color of the button
+  background-color:$grouplet-btn-secondary-back-color;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$primary-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+
+  height: $btn-height;
+  min-width:$btn-width;
+  float: $pull-left;
+  padding: $grouplet-button-padding;
+  margin:$grouplet-remove-button-margin;
+
+  border:$grouplet-remove-btn-border;
+
+
+}
+
+
+//when hover on button
+.fc-btn:hover{
+  @include spacing($space-before-button, $space-after-button);
+
+  //color change when hover
+  background-color: $btn-hover-button;
+  box-shadow: 0px 2px 9px 0 rgba(0, 214, 100, 0.32);
+
+}
+
+
+
 .fc-prev-page .fc-btn {
   @if mixin_exists(button-secondary) {
     @include button-secondary;
+
+
+
   }
 
-  float: left;
-
+  float:left;
   @if mixin_exists(button-prev-page) {
     @include button-prev-page;
+
+
+
   }
+
+
 }
+
 .fc-submit .fc-btn {
-  float: right;
+  float:right;
 
   @if mixin_exists(button-submit) {
     @include button-submit;
   }
 }
+
+.fc-prev-page .fc-btn {
+  background-color:$previous-btn-secondary-back-color;
+  color:$previous-btn-font-color;
+  border:$previous-btn-border;
+
+
+}
+.fc-prev-page .fc-btn:hover{
+  background-color:$previous-btn-hover-back-color;
+  color:$previous-btn-hover-color;
+
+
+
+}
+
+//the attachment button
+.fc-fieldinput-attachButton-wrapper {
+  background-color: $whitecolor !important;
+  height:60px!important;
+  margin-bottom: 5px!important;
+  margin-top: 5px!important;
+}
+
+
+.fc-fieldinput-attachButton-wrapper .fc-btn{
+  background-color:$primary-color!important;
+
+}
+
+.fc-fieldinput-attachButton-wrapper .fc-btn:hover{
+  background-color:$btn-hover-button!important;
+
+}
+
+//the attachment button
+.fc-fieldinput-attachButton-wrapper.fc-btn{
+  padding-left:0px;
+
+}
+
+.fc-fieldinput-attachButton-wrapper.fc-btn:hover{
+  box-shadow:none;
+
+}
+
+

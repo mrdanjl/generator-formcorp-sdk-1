@@ -1,8 +1,9 @@
 @import 'functions';
 @import 'mixins';
 @import 'variables/spacing';
-@import 'variables/default';
 @import 'theme';
+@import 'variables/default';
+
 
 .fc-container.fc-form-loaded {
   // Base
@@ -26,13 +27,22 @@
 
   // Components
   @import 'components/auto-suggest.component';
+  @import 'components/content-radio.component';
   @import 'components/field.component';
+  @import 'components/grouplet.component';
   @import 'components/help.component';
   @import 'components/input-range.component';
   @import 'components/modal.component';
+  @import 'components/numeric-slider.component';
   @import 'components/progress-bar.component';
+  @import 'components/sms.component';
+  @import 'components/table.component';
+  @import 'components/tooltip.component';
   @import 'components/user-feedback.component';
 }
+
+@import 'components/tooltip.component';
+@import 'base/mobile.base';
 
 #fc-modal .modal-dialog {
   background: #fff;

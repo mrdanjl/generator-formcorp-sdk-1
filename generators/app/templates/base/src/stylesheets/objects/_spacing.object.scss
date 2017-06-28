@@ -3,8 +3,95 @@
 .fc-page {
   margin-bottom: $space-after-page;
   margin-top: $space-before-page;
+
+  h1 {
+
+    //font size and color
+    color:$h1-color;
+    font-size:$h1-size;
+    margin:$h1-margin;
+    font-family: $h1-font-family;
+    line-height: $h1-line-height;
+    word-wrap: break-word;
+    @if mixin_exists(primary-heading) {
+      @include primary-heading;
+    }
+  }
+  h2 {
+
+    //font size and color
+    color:$h2-color;
+    font-size:$h2-size;
+    font-family: $h2-font-family;
+    line-height: $h2-line-height;
+    margin:$h2-margin;
+
+    @if mixin_exists(secondary-heading) {
+      @include secondary-heading;
+    }
+  }
+
+  h3 {
+
+    //font size and color
+    color:$h3-color;
+    font-size:$h3-size;
+    font-family: $h3-font-family;
+    line-height: $h3-line-height;
+    margin:$h3-margin;
+
+    @if mixin_exists(secondary-heading) {
+      @include secondary-heading;
+    }
+  }
+
+  h4 {
+    color:$h4-color;
+    font-size:$h4-size;
+    font-family: $h4-font-family;
+    line-height: $h4-line-height;
+    margin:$h4-margin;
+
+  }
+
+  color:$regular-font-color;
+  font-size:$regular-font-size;
+  line-height:$regular-font-height;
 }
+
+//the header in fc-page
+
+.fc-section-desc p{
+
+  color:$section-des-color;
+  font-size:$section-des-size;
+  font-family: $section-des-font-family;
+  line-height: $section-des-line-height;
+  margin:$section-des-margin;
+}
+
+
 .fc-section {
   margin-bottom: $space-after-section;
   margin-top: $space-before-section;
+}
+
+//the line height on body text
+.fc-richtext{
+  line-height:$line-height-para;
+
+}
+
+.fc-prev-page{
+  margin:$pre-end-page;
+
+}
+
+.fc-tag-dateField i{
+  z-index:9;
+}
+
+.fc-fieldinput-attachButton{
+  padding-left:0!important;
+
 }

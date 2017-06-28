@@ -24,3 +24,26 @@
     @include input-radio-button-checked;
   }
 }
+
+
+//the radio button
+.fc-block label span:first-child{
+  border:$checkbox-icon-border;
+  box-shadow: $checkbox-shadow;
+}
+
+:checked + label > span:first-child{
+  background-color:$checkbox-icon-back!important;
+  box-shadow:$checkbox-shadow;
+}
+
+:checked + label > span:first-child i{
+  background-color:$checkbox-icon-color!important;
+
+}
+
+:checked + label > em{
+  color:$field-label-font-color!important;
+
+}
+//the label beside the radio button

@@ -6,7 +6,7 @@
 @import '../theme';
 
 /// The default font size for all inputs.
-$input-font-size: 14px !default;
+$input-font-size: 16px !default;
 
 /// The default minimum height for all inputs.
 $input-min-height: 34px !default;
@@ -36,4 +36,24 @@ $input-selectors: 'input[type=text], input[type=date], input[type=password], sel
       @include input-text-error;
     }
   }
+}
+
+
+//change placeholder color
+.fc-fieldinput::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:  darken($input-field-color,40%);
+}
+.fc-fieldinput:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:  darken($input-field-color,40%);
+  opacity:  1;
+}
+.fc-fieldinput::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:  darken($input-field-color,40%);
+  opacity:  1;
+}
+.fc-fieldinput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:  darken($input-field-color,40%);
+}
+.fc-fieldinput:-ms-input-placeholder { /* Microsoft Edge */
+  color:  darken($input-field-color,40%);
 }

@@ -24,7 +24,7 @@ input[type=checkbox] + label:hover {
 input[type=checkbox] + label > span:first-child {
   background: #fff;
   border-radius: 0;
-  border: $input-checkbox-border-width solid $secondary-color;
+
   cursor: pointer;
   display: inline-block;
   height: $input-checkbox-size;
@@ -38,7 +38,7 @@ input[type=checkbox] + label > span:first-child {
   }
 
   & > b > i {
-    background-color: $secondary-color;
+
     position: absolute;
     visibility: hidden;
   }

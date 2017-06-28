@@ -1,0 +1,173 @@
+//the box of the content radio button
+.fc-content-radio-item{
+  width: $content-radio-button-width;
+  height: $content-radio-button-height;
+  border-radius: $content-radio-button-radius;
+  background-color: $content-radio-button-back-color;
+  border: $content-radio-button-border;
+  margin:20px 20px 0 0;
+}
+
+.fc-content-radio-item:hover{
+  width: $content-radio-button-width;
+  height: $content-radio-button-height;
+  border-radius: $content-radio-button-radius;
+  background-color: $content-radio-button-hover-back-color;
+  border: $content-radio-button-hover-border;
+  margin: $content-radio-button-margin;
+}
+.fc-content-radio-item:hover .fc-content-content .fc-button{
+  line-height: normal;
+
+  //the background color of the button
+  background-color:$primary-color!important;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$content-radio-btn-focus-font-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+  font-size:$content-radio-btn-font-size;
+  height: $btn-height;
+  width:$btn-width;
+  border:$content-radio-btn-border;
+  box-shadow:$content-radio-btn-hover-box-shadow;
+}
+
+//.fc-content-radio-item:hover fc-contenttitle{
+//background-color:$content-radio-button-hover-back-color;
+//}
+
+//the button on the content radio button
+.fc-content-content button.fc-fieldinput{
+
+  line-height: normal;
+
+  //the background color of the button
+  background-color:transparent!important;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$primary-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+  font-size:$content-radio-btn-font-size;
+  height: $btn-height;
+  width:$btn-width;
+  border:$content-radio-btn-border;
+  padding:0!important;
+}
+
+.fc-content-content button.fc-fieldinput:focus{
+
+  line-height: normal;
+
+  //the background color of the button
+  background-color:$primary-color!important;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$content-radio-btn-focus-font-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+  font-size:$content-radio-btn-font-size;
+  height: $btn-height;
+  width:$btn-width;
+  border:$content-radio-btn-border;
+
+
+}
+
+.fc-content-content button.checked{
+
+  line-height: normal;
+
+  //the background color of the button
+  background-color:$primary-color!important;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$content-radio-btn-focus-font-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+  font-size:$content-radio-btn-font-size;
+  height: $btn-height;
+  width:$btn-width;
+  border:$content-radio-btn-border;
+
+
+}
+
+
+
+//the header on the content radio button
+.fc-content-radio-item .fc-content-title{
+  background-color:$content-radio-title-back-color;
+  padding:$content-radio-title-padding;
+  text-align:$content-radio-title-text-align;
+  font-size:$content-radio-title-font-size;
+  font-weight:$content-radio-title-font-weight;
+  border-radius: $content-radio-button-radius $content-radio-button-radius 0 0;
+  border-bottom: $content-radio-title-border-bottom;
+  height:$content-radio-title-height;
+}
+
+
+//the body on the content radio button
+.fc-content-radio-item .fc-content-content{
+  padding:$content-radio-body-padding ;
+}
+
+.fc-content-content .fc-button{
+
+  margin-top:10px!important;
+
+
+}
+
+.checked-radio-title{
+  background-color:$primary-color!important;
+  color:$whitecolor;
+}
+
+.checked-radio-back{
+  background-color:$whitecolor!important;
+
+
+}

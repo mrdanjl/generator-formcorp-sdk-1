@@ -1,18 +1,30 @@
 @import '../theme';
 @import '../objects/button.object';
 
-$modal-padding: 10px 15px !default;
 
 .fc-modal {
   display: none;
+  z-index:16;
 }
 .fc-modal.fc-show {
   display: block;
 }
+
+.modal-dialog{
+  width:$modal-width;
+  height: $modal-height;
+
+  background-color:$modal-back-color;
+  border-radius: $modal-radius ! important;
+  box-shadow:$modal-box-shadow;
+}
+
 .modal-header {
-  background-color: $secondary-color;
-  padding: $modal-padding;
+  background-color:$modal-back-color;
+  padding: $modal-header-padding;
   position: relative;
+
+  border-radius: $modal-radius ! important;
 
   @if mixin_exists(modal-header) {
     @include modal-header;
@@ -21,7 +33,12 @@ $modal-padding: 10px 15px !default;
 .modal-header h2 {
   margin: 0;
   padding: 0;
-  color: #FFF;
+  color: $modal-header-color;
+  font-size:$modal-header-font-size;
+  text-align:$modal-header-text-align;
+  line-height:$modal-header-line-height;
+
+
 
   @if mixin_exists(modal-header-title) {
     @include modal-header-title;
@@ -30,20 +47,89 @@ $modal-padding: 10px 15px !default;
 .modal-header .fc-btn-close {
   bottom: 0;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 0;
+  color:$primary-color;
+  text-decoration:none;
+
 }
 .modal-body {
   padding: $modal-padding;
+
+  color: $modal-des-color;
+  font-size:$modal-des-font-size;
+  text-align:$modal-des-text-align;
+  line-height:$modal-des-line-height;
 
   @if mixin_exists(modal-body) {
     @include modal-body;
   }
 }
 .modal-footer {
+  //text align of button text
+  text-align: $btn-text-center;
   padding: $modal-padding;
-
+  height:70px;
+  margin:30px 0 0 0;
   @if mixin_exists(modal-footer) {
     @include modal-footer;
   }
+}
+
+
+.modal-footer .fc-btn-close {
+
+  padding:10px 40px 10px 40px;
+  text-decoration:none;
+  line-height: 20px;
+  font-size:16px;
+
+
+  //the background color of the button
+  background-color: $primary-color;
+
+  //the radius of the button
+  border-radius: 50px;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color: $btn-text-color;
+
+  //the bold text
+  font-weight: $btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+
+}
+
+
+.modal-footer .fc-btn-add {
+
+  padding:10px 40px 10px 40px;
+  text-decoration:none;
+  line-height: 20px;
+  font-size:16px;
+
+
+  //the background color of the button
+  background-color: $primary-color;
+
+  //the radius of the button
+  border-radius: 50px;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color: $btn-text-color;
+
+  //the bold text
+  font-weight: $btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+
 }

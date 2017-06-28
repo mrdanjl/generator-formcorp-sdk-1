@@ -1,0 +1,88 @@
+input[type="range"].fc-fieldinput{
+  width: $number-slider-width;
+
+  -webkit-appearance: $number-slider-webkit-appearance;
+  height: $number-slider-height;
+  display: $number-slider-display;
+  background-color: $number-slider-back-color;
+
+
+}
+
+input[type="range"].fc-fieldinput:focus{
+
+  border:$number-slider-hover-border;
+  background-color:$number-slider-hover-back-color;
+}
+input[type="range"].fc-fieldinput::-webkit-slider-runnable-track{
+  background-color:$number-slider-track-back-color;
+
+
+}
+
+input[type="range"].fc-fieldinput::-moz-range-track{
+  background-color: $number-slider-track-back-color;
+
+
+}
+
+input[type="range"].fc-fieldinput::-ms-track{
+  background-color: $number-slider-track-back-color;
+
+
+}
+
+input[type="range"].fc-fieldinput::-webkit-slider-thumb{
+  height: $number-slider-thumb-height;
+  width:$number-slider-thumb-width;
+  background-color: $number-slider-thumb-back-color;
+  box-shadow: $number-slider-thumb-box-shadow;
+  border: $number-slider-thumb-border;
+
+
+}
+
+input[type="range"].fc-fieldinput::-moz-range-thumb{
+  height: $number-slider-thumb-height;
+  width:$number-slider-thumb-width;
+  background-color: $number-slider-thumb-back-color;
+  box-shadow: $number-slider-thumb-box-shadow;
+  border: $number-slider-thumb-border;
+
+
+}
+
+input[type="range"].fc-fieldinput::-ms-thumb{
+  height: $number-slider-thumb-height;
+  width:$number-slider-thumb-width;
+  background-color: $number-slider-thumb-back-color;
+  box-shadow: $number-slider-thumb-box-shadow;
+  border: $number-slider-thumb-border;
+
+
+
+}
+
+input[type="range"].fc-fieldinput{
+  margin-top:10px;
+
+}
+
+.fc-numeric-outcome{
+  top: $number-slider-number-top;
+  left:$number-slider-number-left;
+  width: $number-slider-number-width;
+  height: $number-slider-number-height;
+  background-color: $number-slider-number-back-color;
+
+  font-size:$number-slider-number-font-size;
+  line-height:$number-slider-number-line-height;
+  text-align:$number-slider-number-text-align;
+  color: $number-slider-number-color;
+  vertical-align: $number-slider-number-vertical-align;
+  padding:$number-slider-number-padding;
+  -webkit-border-radius:$number-slider-number-webkit-border-radius;
+  -moz-border-radius:$number-slider-number-moz-border-radius;
+  border-radius:$number-slider-number-border-radius;
+
+}

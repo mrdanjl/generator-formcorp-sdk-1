@@ -1,6 +1,27 @@
 @import '../mixins';
 @import '../theme';
 
+//the dropdown box label
+$dropdown-text-color:#434d5f !default;
+$dropdown-text-size:16px !default;
+
+//the drop down box  select
+$appearance-value-borderbox:border-box;
+$appearance-value-null:none;
+
+//remove the border for the span at the end of the checkbox item
+$border-end-of-checkbox:1px solid #fff;
+
+
+//the text beside the checkbox
+$line-style:inline-block;
+$em-width:300px;
+
+//left float
+$email-input-float:left;
+
+
+
 .fc-field {
   @include spacing($space-before-field, $space-after-field);
 }
@@ -23,3 +44,263 @@
     @include error-text;
   }
 }
+
+//input field
+.fc-fieldcontainer .fc-fieldinput{
+  //border-radius: $input-radius;
+  margin:$input-margin;
+  background-color:$input-field-color;
+  border:$input-field-border;
+  padding:$input-field-padding;
+
+}
+
+input.fc-fieldinput{
+
+  height:$input-height;
+  border-radius: $input-radius;
+
+}
+
+textarea.fc-fieldinput{
+  border-radius:$input-textarea-radius;
+  height:$input-textare-height;
+  border-radius: $input-textarea-radius;
+  padding: $input-field-textarea-padding;
+}
+
+//input field focus
+.fc-field-element-container .fc-fieldinput:focus{
+  border: $input-focus-border;
+  background-color:$input-focus-back-color;
+  outline-width: 0;
+  box-shadow:$input-field-box-shadow;
+  z-index: 5;
+
+  outline: none;
+
+}
+
+//the fc field
+.fc-field{
+  margin:$fc-field-margin;
+
+}
+
+//the select input field style
+
+.fc-field-element-container select{
+  border-radius: $input-radius !important;
+  margin:$input-margin;
+  background-color:$input-field-color;
+
+  display: inline-block;
+
+  height: $input-height;
+
+  -webkit-appearance: $appearance-value-null;
+  -moz-appearance: $appearance-value-null;
+
+  border-radius: $input-radius;
+
+
+}
+
+.fc-field-dropdown .fc-field-element-container::before{
+
+  color:  $dropdown-icon-color;
+  content: $dropdown-icon-content;
+  float: $dropdown-icon-float;
+  font-size: $dropdown-icon-font-size;
+  position: $dropdown-icon-position;
+  right: $dropdown-icon-to-right;
+  top: $dropdown-icon-to-top;
+
+  z-index:$dropdown-icon-z-index;
+}
+
+
+
+
+fc-field-element-container select option{
+
+  -webkit-appearance: $appearance-value-null;
+
+}
+//the input field label and des
+.fc-fieldcontainer label{
+  font-size:$field-label-font-size;
+  color:$field-label-font-color;
+  margin:$field-label-margin;
+
+}
+
+.fc-block label{
+  font-size:$field-label-font-size;
+  color:$checkbox-inactive-label-color;
+  margin:$checkbox-label-margin;
+
+}
+
+.fc-block label em{
+  display:$line-style;
+  width:$em-width;
+}
+
+.fc-fieldcontainer .fc-desc p{
+  font-size:$field-des-font-size;
+  color:$field-des-font-color;
+  word-wrap: break-word;
+}
+
+.fc-fieldcontainer .fc-desc{
+  font-size:$field-des-font-size;
+  color:$field-des-font-color;
+}
+
+//the succ and error message beside the input field
+.fc-error-text span{
+  font-size:$error-font-size;
+  color:$error-font-color;
+  margin:$error-margin;
+
+}
+.fc-success p{
+  font-size:$succ-font-size;
+  color:$succ-font-color;
+}
+
+//the list in the fc-field-element-container
+.fc-richtext ul{
+  // list-style: $list-style;
+
+}
+
+//remove the border for the span at the end of the checkbox item
+span.fc-end-checkbox-item{
+  border:$border-end-of-checkbox!important;
+
+}
+
+.fc-fieldcontainer .fc-fieldgroup .fc-field-element-container .fc-block label{
+  display:inline-block;
+  vertical-align: middle;
+
+}
+
+.fc-fieldcontainer .fc-fieldgroup .fc-field-element-container .fc-block label span{
+  display:inline-block;
+  vertical-align: middle;
+
+}
+
+.fc-fieldcontainer .fc-fieldgroup .fc-field-element-container .fc-block label em{
+  display:inline-block;
+  vertical-align: middle;
+
+}
+
+//the privacy box
+.fixed-privacy{
+  border:$privacy-box-border;
+  padding:$privacy-box-padding;
+  background-color: $privacy-box-back-color;
+  border-radius:$privacy-box-radius;
+}
+
+//the email verify input
+.fc-verify-email-input-code{
+  width:$email-verify-input-width;
+  float:$email-input-float;
+
+}
+
+.fc-verify-email-button{
+  margin:$email-verify-input-margin;
+  float:$email-input-float;
+}
+
+.fc-send-email input.fc-btn{
+  line-height: normal;
+  border:$email-send-button-border;
+  //the background color of the button
+  background-color:$email-send-button-back-color;
+
+  //the radius of the button
+  border-radius:$btn-radius;
+
+  //text align of button text
+  text-align: $btn-text-center;
+
+  //color of the text in button
+  color:$email-send-button-font-color;
+
+  //the bold text
+  font-weight:$btn-text-bold;
+
+  //change text to uppercase
+  text-transform: $btn-text-uppercase;
+
+  height: $btn-height;
+  min-width:$btn-width;
+
+}
+.fc-send-email input.fc-btn:hover{
+  background-color:$secondary-btn-hover-back-color
+
+}
+
+.fc-fieldgroup .fc-field-element-container .fc-block input[type=radio]:checked+label span{
+  background-color: $primary-color;
+  background-image: url("data:image/svg+xml,%3Csvg fill='#{url-encode-color($success-icon-color)}' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' x='0px' y='0px' viewBox='-4 -4 30 30' enable-background='new -4 -4 30 30' xml:space='preserve'%3E%3Cpolyline fill-rule='evenodd' clip-rule='evenodd' fill='none' stroke='#{url-encode-color($whitecolor)}' stroke-width='5' stroke-miterlimit='10' points=' 20,6 9,17 4,12 '/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+
+
+
+
+}
+
+.fc-fieldgroup .fc-field-element-container .fc-block input[type=radio]:checked+label i{
+  display:none;
+
+
+
+
+}
+
+.fc-fieldgroup .fc-field-element-container .fc-block input[type=checkbox]:checked+label span{
+  background-color: $primary-color;
+  background-image: url("data:image/svg+xml,%3Csvg fill='#{url-encode-color($success-icon-color)}' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' x='0px' y='0px' viewBox='-4 -4 30 30' enable-background='new -4 -4 30 30' xml:space='preserve'%3E%3Cpolyline fill-rule='evenodd' clip-rule='evenodd' fill='none' stroke='#{url-encode-color($whitecolor)}' stroke-width='5' stroke-miterlimit='10' points=' 20,6 9,17 4,12 '/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+
+
+
+
+}
+
+.fc-fieldgroup .fc-field-element-container .fc-block input[type=checkbox]:checked+label b{
+  display:none;
+
+
+
+
+}
+
+.fc-tag-addressLookup .fc-fieldinput{
+  z-index:11;
+
+}
+.fc-tag-addressLookup .fc-success-box span{
+  z-index:12;
+
+}
+.fc-tag-addressLookup .fc-fieldinput:hover{
+  z-index:11;
+
+}
+.fc-tag-addressLookup .fc-fieldinput:focus{
+  z-index:11;
+
+}
+
+
