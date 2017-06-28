@@ -11,45 +11,48 @@ function renderToolTips() {
 
   $('.fc-help-link').hover(
     (event) => {
-    const tooltipEle = $('.fc-help-tooltip');
-  const dataIndex = $(event.currentTarget).attr('data-for');
-  if (fc.helpData && fc.helpData[dataIndex]) {
-    tooltipEle.html(fc.helpData[dataIndex]);
-    tooltipEle.show();
-    tooltipEle.css({ top: event.originalEvent.pageY, left: event.originalEvent.pageX });
-  }
-},
-  () => {
-    $('.fc-help-tooltip').fadeOut(400, () => {
-      $(this).hide();
-  });
-  },
-);
+      const tooltipEle = $('.fc-help-tooltip');
+      const dataIndex = $(event.currentTarget).attr('data-for');
+      if (fc.helpData && fc.helpData[dataIndex]) {
+        tooltipEle.html(fc.helpData[dataIndex]);
+        tooltipEle.show();
+        tooltipEle.css({
+          top: event.originalEvent.pageY,
+          left: event.originalEvent.pageX
+        });
+      }
+    },
+    () => {
+      $('.fc-help-tooltip').fadeOut(400, () => {
+        $(this).hide();
+      });
+    },
+  );
 
   $('.fc-help-tooltip').hover(
     () => {
-    $('.fc-help-tooltip').stop(true).fadeIn();
-},
-  () => {
-    $('.fc-help-tooltip').fadeOut(400, () => {
-      $(this).hide();
-  });
-  },
-);
+      $('.fc-help-tooltip').stop(true).fadeIn();
+    },
+    () => {
+      $('.fc-help-tooltip').fadeOut(400, () => {
+        $(this).hide();
+      });
+    },
+  );
 
   $('.repos-help').each((i, e) => {
     const $e = $(e);
-  const helpLink = $e.find('.fc-help-link').detach();
-  $e.find('label:eq(1)').append(helpLink[0]);
-  $e.removeClass('repos-help');
-});
+    const helpLink = $e.find('.fc-help-link').detach();
+    $e.find('label:eq(1)').append(helpLink[0]);
+    $e.removeClass('repos-help');
+  });
 }
 
 
 //  add the javascript code here
 function changeContentRadio() {
   //  when content radio button is selected
-  $('.fc-content-content .fc-button').on('click', function () {
+  $('.fc-content-content .fc-button').on('click', function() {
     $('.fc-content-content button:not(:checked)').parents('.fc-content-radio-item').removeClass('checked-radio-back');
     $('.fc-content-content button:not(:checked)').parents('.fc-content-radio-item').find('.fc-content-title').removeClass('checked-radio-title');
 
@@ -75,8 +78,8 @@ function fcMain() {
     /* Start main code */
     fc.domContainer.on(fc.jsEvents.onPageRender, (event, pageId) => { // eslint-disable-line
       fcFormSetup();
-  });
-  /* End main code */
+    });
+    /* End main code */
   } else {
     setTimeout(fcMain, 250);
   }
