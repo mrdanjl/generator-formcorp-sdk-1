@@ -50,10 +50,6 @@ function renderToolTips() {
 function changeContentRadio() {
   //  when content radio button is selected
   $('.fc-content-content .fc-button').on('click', function () {
-    // $('.fc-content-content .fc-button:checked').parent.css('background-color', 'black');
-    // $(this).parent().addClass('checked-radio');
-    // console.log($(this).prop('outerHTML'));
-    // $(this).parent().addClass('selected');
     $('.fc-content-content button:not(:checked)').parents('.fc-content-radio-item').removeClass('checked-radio-back');
     $('.fc-content-content button:not(:checked)').parents('.fc-content-radio-item').find('.fc-content-title').removeClass('checked-radio-title');
 
@@ -80,7 +76,7 @@ function fcMain() {
     fc.domContainer.on(fc.jsEvents.onPageRender, (event, pageId) => { // eslint-disable-line
       fcFormSetup();
   });
-    /* End main code */
+  /* End main code */
   } else {
     setTimeout(fcMain, 250);
   }
