@@ -3,10 +3,10 @@
 
 ## Installation
 
-Unstall [Yeoman](http://yeoman.io) and the generator-formcorp-sdk-1 using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+Install [Yeoman](http://yeoman.io) and [Gulp](http://gulpjs.com/) then the the generator-formcorp-sdk-1 using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-npm install -g yo
+npm install -g yo gulp
 npm install -g git+https://git@github.com/mrdanjl/generator-formcorp-sdk-1.git
 ```
 
@@ -15,6 +15,19 @@ Then generate your new project:
 ```bash
 yo formcorp-sdk-1
 ```
+
+For development run the following in the project folder:
+
+```
+gulp serve
+```
+
+To build:
+
+```
+gulp build
+```
+
 
 ## License
 
