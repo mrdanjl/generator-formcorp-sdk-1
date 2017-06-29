@@ -19,13 +19,13 @@ yo formcorp-sdk-1
 For development run the following in the project folder:
 
 ```
-gulp serve
+npm run serve
 ```
 
 To build:
 
 ```
-gulp build
+npm run build
 ```
 
 
