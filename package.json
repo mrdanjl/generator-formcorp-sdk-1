@@ -40,9 +40,7 @@
   "scripts": {
     "prepublish": "nsp check",
     "pretest": "eslint . --fix",
-    "test": "jest",
-    "serve": "gulp serve",
-    "build": "gulp build"
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "xo-space",
