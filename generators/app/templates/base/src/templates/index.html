@@ -11,7 +11,7 @@
 <!-- Formcorp -->
 <!-- inject:css -->
 <!-- endinject -->
-<div id="formcorp-form" data-id="256">
+<div id="formcorp-form" data-id="<%= formcorpId %>">
   <div class="loading">&nbsp;</div>
 </div>
 <script src="https://rawgit.com/formcorp/js-formcorp/29255b60c297e9d1cd9f5d7ed3cde1b0ceb66868/formcorp.js" charset="utf-8" id="fc-js-include"></script>
@@ -26,7 +26,7 @@
     realTimeValidation: true,
     timeUserOut: false,
     saveInRealTime: true,
-    onePage: true,
+    <% if (pageStyle === 'Single page') { %>onePage: true,<% } else { %>onePage: false,<% } %>
     smoothScroll: false,
     autoLoadPages: false,
     autoScrollToNextField: true,
@@ -68,7 +68,7 @@
   fc.setAsDevelopmentMode();
   fc.setApiUrl('https://api.formcorp.com.au/');
   fc.setCdnUrl('https://rawgit.com/formcorp/js-formcorp/master/');
-  fc.init('F5931d1ff072D1E194F91624f867112ffC1eA803208Eb82cA6b33D04a69B8ecb', 'formcorp-form');
+  fc.init('<%= authenticationKey %>', 'formcorp-form');
 
 
 </script>
