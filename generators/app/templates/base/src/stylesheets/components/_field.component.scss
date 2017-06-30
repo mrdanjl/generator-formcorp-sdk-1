@@ -303,4 +303,26 @@ span.fc-end-checkbox-item{
 
 }
 
+// the radio list and checkbox list width
+.fc-field-radioList .fc-block label em{
+  width:90%;
+  word-wrap:break-word;
+
+}
+.fc-field-radioList .fc-block label{
+  padding:5px 0;
+  width:100%;
+
+}
+
+.fc-field-checkboxList .fc-block label em{
+
+  width:90%;
+
+}
+
+.fc-field-checkboxList .fc-block label{
+  padding:5px 0;
+  width:100%;
+}
 

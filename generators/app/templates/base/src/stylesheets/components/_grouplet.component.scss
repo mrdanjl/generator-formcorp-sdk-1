@@ -15,3 +15,95 @@
   overflow:hidden;
   margin: $grouplet-margin;
 }
+
+//the drop down box icon in grouplet
+.fc-repeatable .fc-repeatable-row .fc-field-dropdown .fc-field-element-container::before{
+
+
+  position: $dropdown-icon-position;
+  right: $dropdown-icon-to-right;
+  top: $dropdown-icon-grouplet-to-top;
+
+
+}
+
+.fc-repeatable .fc-repeatable-row .fc-fieldcontainer input[type=radio]{
+
+  display: none!important;
+
+
+}
+
+.fc-repeatable .fc-repeatable-row .fc-fieldcontainer input[type=checkbox]{
+
+  display: none!important;
+
+
+}
+
+//the radio button
+.fc-repeatable .fc-repeatable-row .fc-fieldcontainer input[type=radio]:checked+label span{
+  background-color: $primary-color;
+  background-image: url("data:image/svg+xml,%3Csvg fill='#{url-encode-color($success-icon-color)}' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' x='0px' y='0px' viewBox='-4 -4 30 30' enable-background='new -4 -4 30 30' xml:space='preserve'%3E%3Cpolyline fill-rule='evenodd' clip-rule='evenodd' fill='none' stroke='#{url-encode-color($whitecolor)}' stroke-width='5' stroke-miterlimit='10' points=' 20,6 9,17 4,12 '/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+
+
+
+
+}
+
+.fc-repeatable .fc-field-radioList .fc-inline label span:first-child{
+  border:$checkbox-icon-border;
+  box-shadow: $checkbox-shadow;
+}
+
+.fc-repeatable .fc-repeatable-row .fc-fieldcontainer input[type=radio]:checked+label i{
+  display:none;
+
+
+
+
+}
+
+.fc-repeatable .fc-repeatable-row .fc-fieldcontainer input[type=checkbox]:checked+label span{
+  background-color: $primary-color;
+  background-image: url("data:image/svg+xml,%3Csvg fill='#{url-encode-color($success-icon-color)}' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' x='0px' y='0px' viewBox='-4 -4 30 30' enable-background='new -4 -4 30 30' xml:space='preserve'%3E%3Cpolyline fill-rule='evenodd' clip-rule='evenodd' fill='none' stroke='#{url-encode-color($whitecolor)}' stroke-width='5' stroke-miterlimit='10' points=' 20,6 9,17 4,12 '/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+
+
+
+
+}
+
+//radio button in group let
+.fc-field-radioList .fc-inline label em{
+  width:90%;
+  max-width:90%;
+}
+.fc-field-radioList .fc-inline  label{
+
+  width:100%;
+  margin-top:10px!important;
+}
+
+.fc-repeatable .fc-repeatable-row .fc-field-radioList .fc-fieldcontainer  .fc-inline{
+  display: block!important;
+}
+
+
+.fc-field-radioList .fc-inline  label:before{
+
+  //width:90%;
+
+}
+
+.fc-field-checkboxList .fc-inline  label em{
+
+  width:90%;
+
+}
+
+.fc-field-checkboxList .fc-inline  label{
+  padding:5px 0;
+  width:100%;
+}

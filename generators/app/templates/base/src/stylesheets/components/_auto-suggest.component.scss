@@ -74,6 +74,7 @@
 
 .fc-auto-suggest .fc-suggest-row > a {
   line-height: 30px;
+  height:30px;
   font-size:$auto-suggest-font-size;
   text-align:$auto-suggest-row-text-align;
   color: $auto-suggest-font-color;
@@ -87,13 +88,30 @@
 }
 
 
-.fc-tag-personalDetails_address.fc-field-apiLookup input{
+.fc-field-apiLookup input{
   z-index:11!important;
 
 }
 
 
-.fc-tag-personalDetails_address.fc-field-apiLookup .fc-success-box span{
+.fc-field-apiLookup .fc-success-box span{
   z-index:12!important;
+
+}
+
+//auto suggest drop and down suggest
+
+.fc-auto-suggest .selected a{
+  color:$auto-suggest-a-hover-color!important;
+  background-color: #ffffff!important;
+
+
+}
+
+
+.fc-repeatable .fc-repeatable-row .fc-auto-suggest .fc-suggest-row:first-child a{
+  height:30px!important;
+
+
 
 }
