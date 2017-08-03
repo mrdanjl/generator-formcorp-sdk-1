@@ -63,11 +63,11 @@ $h4-margin:13px 0 10px 0!default;
 $section-des-color:#5e6d7f !default;
 $section-des-size:16px !default;
 $section-des-font-family:$primary-font!default;
-$section-des-line-height:20px;
+$section-des-line-height:20px !default;
 $section-des-margin:10px 0 10px 0!default;
 //normal text
-$regular-font-size:16px !default;
-$regular-font-height:20px !default;
+$regular-font-size:$section-des-size;
+$regular-font-height:$section-des-line-height;
 $regular-font-color:#434d5f !default;
 
 
@@ -217,7 +217,7 @@ $modal-padding:25px 15px 0px 15px!default;
 
 //progress bar style
 $progress-bar-size: 35px !default;
-$progress-bar-node-link-height: 8px !default;
+$progress-bar-node-link-height: 9px !default;
 $progress-bar-node-complete-border:3px solid $primary-color !default;
 $progress-bar-node-current-border:4px solid $primary-color !default;
 //the progress bar step count hide
@@ -332,7 +332,7 @@ $previous-btn-hover-color:$whitecolor;
 $privacy-box-border:1px solid $line-stroke-color!default;
 //padding of the privcy acknowledge part
 $privacy-box-padding:20px;
-$privacy-box-back-color:#f9fafb;
+$privacy-box-back-color:$secondary-color;
 $privacy-box-radius:20px;
 
 //auto-suggest box styling

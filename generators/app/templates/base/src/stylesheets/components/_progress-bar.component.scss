@@ -41,7 +41,7 @@
   background-color:$primary-color;
   content: '';
   height: $progress-bar-node-link-height;
-  left: 0;
+  left: -3px;
   position: absolute;
   top: calc(50% - #{($progress-bar-node-link-height / 2)});
   width: 100%;
@@ -72,7 +72,7 @@
 
 }
 .fc-progress-bar:after {
-  background-color: #eef2f4;
+  background-color: $secondary-color;
   content: '';
   height: $progress-bar-node-link-height;
   left: 0;
