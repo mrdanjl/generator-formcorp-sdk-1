@@ -342,6 +342,11 @@ span.fc-end-checkbox-item{
   margin:0;
 }
 
+.fc-repeatable-row .two-col .fc-fieldcontainer{
+  width:100%;
+
+}
+
 .three-col .fc-fieldcontainer{
   width: 32%;
   float:left;
@@ -356,4 +361,10 @@ span.fc-end-checkbox-item{
 
 .three-col input{
   margin:0;
+}
+
+
+.fc-repeatable-row .three-col .fc-fieldcontainer{
+  width:100%;
+
 }
