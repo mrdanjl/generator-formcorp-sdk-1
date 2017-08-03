@@ -326,3 +326,34 @@ span.fc-end-checkbox-item{
   width:100%;
 }
 
+.two-col .fc-fieldcontainer{
+  width: 49%;
+  float:left;
+  margin-right:1%;
+  z-index: 1;
+  padding: 0 0 10px 0;
+}
+
+.two-col label{
+  margin:10px 0 0 0;
+}
+
+.two-col input{
+  margin:0;
+}
+
+.three-col .fc-fieldcontainer{
+  width: 32%;
+  float:left;
+  margin-right:1%;
+  z-index: 1;
+  padding: 0 0 10px 0;
+}
+
+.three-col label{
+  margin:10px 0 0 0;
+}
+
+.three-col input{
+  margin:0;
+}
